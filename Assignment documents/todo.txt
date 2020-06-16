@@ -1,0 +1,50 @@
+done
+
+1. like photo, and liked posts list
+2. emoticon insted of just like - choose emoticon
+
+TODO
+
+unlike
+
+unfollow
+
+
+
+profile links of other user
+
+chat
+
+notifications
+
+
+comments
+
+update post
+
+private accounts
+
+
+remove friend/ follower/following
+
+# add ability to upload multiple photos as seperate posts
+
+# ability to add multiple photos to singe post
+
+improve explore with pagination/infinate scrolling
+
+improving css
+
+delete and update post
+
+images hosting uploadcare 
+
+app hosting on heroku
+
+
+search user
+
+footer
+
+postgreSQL
+

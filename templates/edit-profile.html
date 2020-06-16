@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+{% block content1 %}
+    {% include 'nav.html' %}
+<main>
+
+    <div class="container">
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-6">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Profile Information</legend>
+                        {{ u_form|crispy}}
+                        {{ p_form|crispy}}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">Update Profile</button>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+{% endblock %}
