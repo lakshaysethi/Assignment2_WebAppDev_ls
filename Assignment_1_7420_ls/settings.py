@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1i*ddp+2$-+ylh)s!g)b^l)*cgan8@yi-_^^5=1j)mp=k@rpjt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['instaclone.lakshaysethi.com','instals.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['instaclone.lakshaysethi.com','instals.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -80,21 +80,10 @@ WSGI_APPLICATION = 'Assignment_1_7420_ls.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-DATABASES = {   
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'ec2-52-44-55-63.compute-1.amazonaws.com',
-        'NAME': 'd6e2tirm7t9i3g',
-        'USER': 'yvosenamazwswo',
-        'PORT':'5432',
-        'PASSWORD':'74c3bb0327b76eaa8cf8648f1b6ef735d331ed48136dcf2da65cd16ae136b4a5',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -152,31 +141,6 @@ CRISPY_TEMPLATE_PACK  = 'bootstrap4'
 
 
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'pythondjangolakshay@gmail.com'
-# EMAIL_HOST_PASSWORD = 'testing321'
-
-
-INTERNAL_IPS = [
-    # ...
-    '127.0.0.1',
-    # ...
-]
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-AWS_STORAGE_BUCKET_NAME = 'instalsbucket'
-
-
-AWS_DEFAULT_ACL=None
-
-
-#  LATER CEHCK https://github.com/sklarsa/django-sendgrid-v5
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 EMAIL_HOST = 'smtp.sendgrid.net'
